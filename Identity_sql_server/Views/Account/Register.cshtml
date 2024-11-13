@@ -1,0 +1,32 @@
+﻿@model Identity_sql_server.Models.Customers
+
+<form asp-action="Register" asp-controller="Account" method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label>Username</label>
+        <input type="text" asp-for="username"/>
+        <span asp-validation-for="username"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="password" type="password" />
+        <span asp-validation-for="password"></span>
+    </div>
+    <div>
+        <label>Realname</label>
+        <input type="text"  asp-for="realname" />
+        <span asp-validation-for="realname"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type ="text" asp-for="email" type="email" />
+        <span asp-validation-for="email"></span>
+    </div>
+    <div>
+        <label>Phone</label>
+        <input type="text"  asp-for="phone" />
+        <span asp-validation-for="phone"></span>
+    </div>
+    <button type="submit">Register</button>
+
+</form>

@@ -1,0 +1,15 @@
+﻿<form asp-action="Login" method="post">
+    <div>
+        <label>Username</label>
+        <input name="username"/>
+    </div>
+    <div>
+        <label>Password</label>
+        <input name="password" type="password"/>
+    </div>
+    <button type="submit">Login</button>
+    @if(ViewData.ModelState.ContainsKey(""))
+    {
+        <div>@ViewData.ModelState[""].Errors.FirstOrDefault()?.ErrorMessage</div>
+    }
+</form>

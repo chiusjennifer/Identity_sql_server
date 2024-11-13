@@ -1,0 +1,30 @@
+﻿@model List<Identity_sql_server.Models.Customers>
+@{
+}
+<h1>List Customer Data</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>customer_id</th>
+            <th>username</th>
+            <th>password</th>
+            <th>realname</th>
+            <th>email</th>
+            <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var User in Model)
+        {
+            <tr>
+                <td>@User.customers_id</td>
+                <td>@User.username</td>
+                <td>@User.password</td>
+                <td>@User.realname</td>
+                <td>@User.email</td>
+                <td>@User.phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
