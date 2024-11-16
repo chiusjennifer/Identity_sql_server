@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Identity_sql_server</title>
+    <title>@ViewData["Title"] - 海之蚵線上訂餐系統</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Identity_sql_server.styles.css" asp-append-version="true" />
@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Identity_sql_server</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">海之蚵線上訂餐系統</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,6 +34,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ListCust">ListCust</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Menu">菜單</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" asp-controller="Orders" asp-action="OrderDetails">Order Details</a>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -47,7 +53,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Identity_sql_server - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+           <p>營業時間:星期一~日11:00-14:30,17:00-21:30&nbsp;&nbsp;電話號碼:04-2633-8338&nbsp;&nbsp;地址:433台中市沙鹿區北勢東路526號</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

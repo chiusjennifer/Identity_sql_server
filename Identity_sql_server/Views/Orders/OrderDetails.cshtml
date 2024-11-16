@@ -1,0 +1,33 @@
+﻿@model Orders
+
+<h1>Your Order</h1>
+
+<table>
+    <tr>
+        <th>Dish Name</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+    </tr>
+    @foreach (var item in Model.Order_Items)
+    {
+        <tr>
+            <td>@item.Meal.dish_name</td>
+            <td>@item.quantity</td>
+            <td>@item.subtotal</td>
+        </tr>
+    }
+</table>
+
+<p>Total: @Model.total_price</p>
+
+<form asp-action="Checkout" method="post">
+    <input type="hidden" name="orderId" value="@Model.order_id" />
+    <label>Payment Method:</label>
+    <select name="payMethod">
+        <option value="Credit Card">刷卡</option>
+        <option value="Cash">現金</option>
+    </select>
+    <label>Notes:</label>
+    <input type="text" name="notes" />
+    <button type="submit">Checkout</button>
+</form>

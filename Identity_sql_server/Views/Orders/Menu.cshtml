@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Meals>
+
+<h1>Menu</h1>
+
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Dish Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var meal in Model)
+    {
+        <tr>
+            <td>@meal.category</td>
+            <td>@meal.dish_name</td>
+            <td>@meal.unit_price</td>
+            <td>
+                <form asp-action="AddToOrder" asp-controller="Orders" method="post">
+                    <input type="hidden" name="meal_id" value="@meal.meal_id" />
+                    <input type="number" name="quantity" value="1" min="1" />
+                    <button type="submit" class="btn btn-primary">加入購物車</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
